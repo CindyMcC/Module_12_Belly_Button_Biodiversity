@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bellybutton Biodiversity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      header
+      {
+        background-color: blue;
+        width: 100%;
+      }
+    </style>
+  </head>
+</header>
+
+<body>
+  <style>
+    body {
+      background-color:lightgray;
+    }
+    </style>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" 
+        style="background-color: #214ee2; font-size: larger; font-style: italic; font-weight: bold; color:darkred; 
+        background-image: url('static/images/background.jpg');background-repeat: no-repeat; background-attachment: fixed; 
+        background-size: cover; "
+         >
+
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well"  style="background-color: lightgray; font-weight: bold;">
+          <h5>Test Subject ID No.: </h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary" ;>
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body" style="background-color:lightgrey;" ></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar" style="background-color: lightgray;"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge" class="responsive_plot" style="background-color: lightgray;"></div>
+      </div>
+    </div>
+    <div><p></p><p></p></div>
+    <div class="row">
+      <div class="col-md-12" style="background-color: lightgray;">
+        <div id="bubble" style="background-color: lightgray;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+  <script src="static/js/charts.js"></script>
+</body>
+
+</html>
